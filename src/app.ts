@@ -1,8 +1,6 @@
 import fastify from "fastify";
+import cookie from "@fastify/cookie";
 
 export const app = fastify();
 
-app.get("/", async () => {
-    return { hello: "world" };
-});
-
+app.register(cookie);
